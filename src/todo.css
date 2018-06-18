@@ -1,0 +1,134 @@
+.todo {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.todo-item {
+  padding: 16px 12px;
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e8e8e8;
+  margin-top: 10px;
+}
+
+.todo-item:first-child {
+  margin-top: 0;
+}
+
+.todo-item_panel {
+  display: flex;
+  align-items: center;
+}
+
+.todo-item_panel .check {
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.todo-item_panel .check .check_dot {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+}
+.todo-item_panel .check input[type="checkbox"]:checked+.check_dot::before {
+  position: absolute;
+  content: '';
+  top: 2px;
+  left: 2px;
+  border-width: 0 0 2px 2px;
+  border-color: #C0C4CC;
+  border-style: solid;
+  border-radius: 0 0 0 3px;
+  width: 16px;
+  height: 6px;
+  transform: rotate(-30deg);
+}
+.todo-item_panel .text {
+  flex: 1;
+  margin: 0;
+}
+.todo-item_panel .text.done {
+  text-decoration:line-through;
+  color: #aaaaaa;
+
+}
+.todo-item_panel .btn_del {
+  width: 30px;
+  text-align: right;
+  color: #888888;
+  cursor: pointer;
+  display: none;
+  color: #F56C6C;
+}
+
+.todo-item:hover .btn_del {
+  display: block;
+}
+
+.inputBox {
+  width: 100%;
+  /* margin-bottom: 10px; */
+}
+
+.todo-input {
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  color: #222222;
+  font-weight: 300;
+  box-sizing: border-box;
+  border-radius: 3px 3px 0 0;
+}
+
+.todo-filter {
+  border-radius: 0 0 3px 3px;
+  margin-top: -1px;
+  padding: 6px 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.03) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #909399;
+}
+
+.todo-filter .li {
+  flex: 1;
+  text-align: center;
+}
+
+.todo-filter .li .radio-name {
+  padding: 2px 10px;
+  font-size: 12px;
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.todo-filter .li input[type="radio"]:checked+.radio-name {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+.todo-filter .li .item-num {
+  color: inherit;
+  font-size: 14px;
+}
+
+.todo-input::placeholder {
+  color: #e5e5e5;
+  font-weight: 300;
+}
+
+.todo-input:focus{
+  color: #666666;
+}

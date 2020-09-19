@@ -11,6 +11,9 @@ class TodoFilter extends Component {
 	//console.log(this);
   }
 
+  ddddd() {
+    console.log(this); //undefined
+  }
   render() {
     let { data, active, total } = this.props;
 	//console.log("============render this===============");
